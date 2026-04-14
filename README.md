@@ -9,7 +9,7 @@
 
 This project investigates the tactical errors in my personal chess game history (Lichess username: **iamtheobama**) and examines whether these mistakes reflect systematic blind spots in my game. By analyzing centipawn loss and blunder patterns, the project transforms personal game data into targeted puzzle recommendations.
 
-The analysis uses Stockfish engine evaluations to detect blunders and near-misses, then matches these positions with similar puzzles from the Lichess Open Puzzle Database using K-Nearest Neighbors (KNN) on FEN-based similarity metrics.
+The analysis uses Stockfish engine evaluations to detect blunders and near-misses. Matching these positions with similar puzzles from the Lichess Open Puzzle Database using K-Nearest Neighbors (KNN) is planned for the next stage of the project.
 
 ---
 
@@ -55,8 +55,8 @@ What are my specific tactical blind spots, and can a KNN-based puzzle recommende
 - **H₂ (Time Forfeit Rate):**
   The proportion of games ending by time forfeit is significantly higher than 50%, indicating that time management — not pure tactical ability — is a primary loss factor.
 
-- **H₃ (KNN Puzzle Matching):**
-  Blunder positions can be meaningfully matched to Lichess puzzles via FEN-based similarity, enabling targeted tactical training.
+- **H₃ (Puzzle Matching Feasibility):**
+  Blunder positions can potentially be matched to Lichess puzzles via FEN-based similarity, which will be explored in the next stage of the project.
 
 ---
 
@@ -87,6 +87,8 @@ Contains 5.5M+ puzzles with:
 - Moves (solution sequence)
 - Rating, popularity, themes (e.g., `fork`, `pin`, `backRankMate`)
 - Opening tags
+
+The puzzle dataset will be used in the machine learning stage of the project and is not fully integrated in the current EDA and hypothesis testing phase.
 
 ---
 
@@ -184,6 +186,8 @@ Welch's t-test used for pairwise comparisons where equal variance cannot be assu
 ---
 
 ### Results
+
+H₃ is not evaluated in the current stage, as it requires integration with the puzzle dataset and implementation of similarity-based methods. This will be addressed in the machine learning phase of the project.
 
 #### Test 1: Opening Family Win Rate Differences (H₁)
 | Metric | Value |
